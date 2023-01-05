@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    </style>
+    <script src="js/mountain.js"></script>
+    <title>Mount Raenmora</title>
+</head>
+<body>
+    <div id="mount-container" class="container">
+        <div class="character">
+            <img id="elise" src="images/elise.png">
+        </div>
+        <div class="dialogue-container" id="mount-dialogue">
+            <div class="dialogue" id="mountain-intro">
+                A visitor to Mount Raenmora? My people have not seen a fresh soul in years.
+            </div>
+            <button class="next-button" id="mountain-next">Next</button>
+        </div>
+     
+       
+        <div class="map-point" id="tree">
+            <div class="text">
+                When we stumbled upon this mountain our ancestor Cun’rea found strange glowing seeds scattered amid the rocks upon the ground. As the legend goes, once planted, the seeds forged into one, and they grew into Anavran Sail’vrain, the very tree in front of us now. This tree became a symbol of the tylves’ longevity over the years. It’s been here as long as we have.
+            </div>
+        </div>
+
+        <div class="map-point" id="wall-homes">
+            <div class="text">
+                We have no need for walls or doors or any such confines. Living out in the open suits our community perfectly. We don’t really need light either, seeing as we have no eyes. Instead our sensors help us process the world around us. I couldn’t possibly imagine being shut away from everyone the way they are at Riam’Neave and the Empire. Hearing my people milling about all around me is soothing. We are never alone.
+            </div>
+        </div>   
+        <div class="map-point" id="to-plant-game">
+            <div class="text">
+                Ah, I see you’ve spotted the entrance to the fields. Come this way…I can teach you how to tell our plants apart from another. The last visitor got confused and mixed together two plants that aren’t meant to touch, and nearly poisoned herself to death, but…I’m sure that won’t happen to you! 
+            </div>
+            <button class="location-button" onclick="location.href='plantgame.html'">Discover Agriculture</button>
+        </div>
+        <button class="map-button" onclick="location.href = 'map.html'">Map</button>
+        
+    </div>
+</body>
+</html>

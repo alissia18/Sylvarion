@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/plants.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    </style>
+    
+    <title>Plants of the Mount</title>
+</head>
+<body id="plantgame-body">
+    <div class="container" id="plant-dialogue-container">
+        <div class="character">
+            <img id="elise-plantgame" src="images/elise.png">
+        </div>
+        <div class="dialogue-container" id="plant-dialogue">
+            <div class="dialogue" id="plant-intro">
+                Follow me, Traveller. These are the agricultural fields of Mount Raenmora. 
+            </div>
+            <button class="next-button" id="plant-next">Next</button>
+        </div>
+    </div>
+    <div class="container" id="memory-container">
+        <div class="memory-card" data-framework = "1">
+            <img class="front-face" src="images/memoryGame/1.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "1">
+            <img class="front-face" src="images/memoryGame/1.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "2">
+            <img class="front-face" src="images/memoryGame/2.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "2">
+            <img class="front-face" src="images/memoryGame/2.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "3">
+            <img class="front-face" src="images/memoryGame/3.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "3">
+            <img class="front-face" src="images/memoryGame/3.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "4">
+            <img class="front-face" src="images/memoryGame/4.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "4">
+            <img class="front-face" src="images/memoryGame/4.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "5">
+            <img class="front-face" src="images/memoryGame/5.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "5">
+            <img class="front-face" src="images/memoryGame/5.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "6">
+            <img class="front-face" src="images/memoryGame/6.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+        <div class="memory-card" data-framework = "6">
+            <img class="front-face" src="images/memoryGame/6.png">
+            <img class="back-face" src="images/memoryGame/back.png">
+        </div>
+    </div>
+
+    <div class="container" id="plantgame-result">
+        you did it!
+        <div>
+            <button class="skyfish-button" onclick="reset()" id="try-again-plants">Try again?</button>
+        </div>
+        <div>
+            <button class="skyfish-button" onclick = "location.href = 'mountraenmora.html'">Return To Raenmora</button>
+        </div>
+    </div>
+
+
+</body>
+</html>

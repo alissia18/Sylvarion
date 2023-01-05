@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/mapscript.js"></script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    </style>
+    
+    <title>Map</title>
+</head>
+<body>
+   <div class="container" id="map">
+        <div class="character">
+            <img id="sapphira-map" src="images/sapphira.png">
+        </div>
+    <div class="dialogue-container">
+        <div class="dialogue" id="map-intro">
+            Oh! Hello! Welcome to the continent!! Right–Before I forget, here’s the map I’m supposed to give you, it’ll take you anywhere you point to.
+        </div>
+        <button class="next-button" id="map-continue">Next</button>
+    </div>
+    
+        <div class="map-point" id="caer-samaed">
+            <div class="text">
+                <strong>Caer Samaed</strong>
+                <br>Visit the capital city of the Empire today, and discover how villages can be built in harmony with nature, not against it. A word of caution to new visitors: All use of magic is strictly forbidden in the lands of the Empire, and punishable by death. Mages, visit at your own risk. Discover Caer Samaed today!
+            </div>
+            <button class="location-button" onclick="location.href='caer-samaed.html'">enter</button>
+        </div> 
+        
+        <div class="map-point" id="riam-neave">
+            <div class="text">
+                <strong>Riam'Neave</strong>
+                <br>This floating city is often a favourite of visitors to Kartyrea. Relish in the spectacular views, ornate houses and unprecedented feats of magical technology. Visit Riam’Neave today!
+            </div>
+            <button class="location-button" onclick="location.href='riam-neave.html'">enter</button>
+        </div>
+        
+
+        <div class="map-point" id="mount-raenmora">
+            <div class="text">
+                <strong>Mount Raenmora</strong>
+                <br>Home to the most beautiful biodiversity on the continent, Mount Raenmora is an essential stop on any first-time traveller’s tour of Kartyrea. Meet the tylves, a peaceful community of blind creatures, and discover how they live inside the mountain’s hollow caverns. Stop by Mount Raenmora today!
+            </div>
+            <button class="location-button" onclick="location.href='mountraenmora.html'">enter</button>
+        </div>
+
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,691 @@
+html {
+    height: 100vh;
+    font-family: 'Nanum Pen Script';
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    background-image: linear-gradient(rgb(114, 143, 219), rgb(159, 165, 199));
+    min-height: 100%;
+    background-repeat: no-repeat;
+    
+}
+button {
+    background-color: #fff;
+    border-style: none;
+    transition: all .5s ease-in-out;
+    font-family: 'Nanum Pen Script';
+   
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 63, 93);
+    box-shadow: 0px 0px 50px 8px rgb(0, 255, 195);
+    color: #fff;
+}
+/** landing page styling **/
+
+#welcome {
+    flex-direction: column;
+}
+#welcome span{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 17vh;
+    color:rgb(6, 6, 34);
+}
+#welcome button {
+    padding: 1.5%;
+    box-shadow: 0px 2px 10px 2px rgb(6, 6, 34);
+    border-radius: 0.75em;
+    font-size: 3em;
+}
+
+a {
+    font-size: 5vh;
+    text-decoration: none;
+}
+a:hover {
+    color:rgb(113, 255, 243);
+}
+
+#welcome button:hover {
+    box-shadow: 0px 0px 50px 15px rgb(255, 255, 255);
+}
+
+/**map styling **/
+
+#map-intro {
+    position: relative;
+}
+
+#map-continue {
+    position: relative;
+}
+
+#map {
+    background: url("images/map.png") no-repeat 0 0 fixed;
+    background-position: center;
+    background-size: contain;
+    position: fixed;
+    filter: drop-shadow( 0px 0px 10px rgb(0, 0, 0) );
+}
+
+.map-point{
+    visibility: hidden;
+    display:block;
+    background-color:rgb(0, 122, 156);
+    border-radius: 20px;
+    position: absolute;
+    padding: 0;
+    max-width: 20px;
+    max-height: 20px;
+    box-shadow: 0px 0px 5px 5px #fff;
+}
+
+.map-point:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30vw;
+    max-height: 50vh;
+    padding: 2vh;
+    margin-left: -10vw;
+    background-color:rgb(255, 255, 255);
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    box-shadow: 0px 0px 50px 5px #fff;
+}
+
+.text {
+    visibility: hidden;
+    text-align: center;
+    font-size: 1.2em;
+    padding:0;
+    margin: 0;
+}
+
+.text em {
+    color:rgb(246, 0, 0);
+}
+
+.map-point:hover .text {
+    visibility: visible;
+    padding: 1em;
+    margin-top: 0;
+    transition: all .5s ease-in-out;
+    transition-delay: .5s;
+}
+
+button.location-button {
+    opacity: 0;
+    color: #fff;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    font-size: 1.3em;
+    background-color:rgb(114, 143, 219);
+}
+
+button.location-button:hover {
+    box-shadow:0px 0px 10px 2px rgb(0, 0, 96);
+    transform: rotate(15deg);
+    color:rgb(7, 17, 76);
+    background-color:rgb(194, 211, 255);
+    
+}
+
+.map-point:hover button.location-button {
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    transition-delay: .5s;
+}
+
+
+#chromaria {
+    left: 53%;
+    top: 36%;
+}
+
+#caer-samaed{
+    left: 64%;
+    top: 60%;
+}
+
+#umbrapolis {
+    left: 30%;
+    top: 53%;
+}
+
+#riam-neave {
+    left: 35%;
+    top: 30%;
+
+}
+#mount-raenmora {
+    left: 61%;
+    top: 24%;
+}
+
+/**character and dialogue styling**/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    gap: 20px;
+    background-size: 90%;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    
+}
+#riamneave-container {
+    background: url("images/riamneave.png") no-repeat 0 0 fixed;
+    background-position-x: center;
+    background-size: contain;
+    
+}
+.character {
+    max-width: 50%;
+    margin: 0;
+}
+#sapphira, #sapphira-map {
+    width: 100%;
+    margin-left: -20%;
+    margin-top: 10%;
+    animation: float 6s ease-in-out infinite, moveInLeft 3s ease-in-out 1;
+}
+
+.dialogue-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 30%;
+    padding: 1em;
+    margin-left: -20%;
+    font-size: 2em;
+    max-height: 70vh;
+    border-radius: 1em;
+    animation: appear 6s ease-in-out 1;
+}
+
+#riamneave-next{
+    opacity: 1;
+    background-color:rgb(0, 122, 156);
+    color: #fff;
+    border-radius: 0.5em;
+    font-size: larger;
+    animation: appear 6s ease-in-out 1;
+}
+button.map-button {
+    padding: 1.5%;
+    align-self: baseline;
+    z-index: 2;
+    top: 90%;
+    left: 90%;
+    border-radius: 0.75em;
+    font-size: 1.8em;
+    position: absolute;
+    
+}
+
+button.map-button:hover{
+    box-shadow: 0px 0px 50px 8px #fff;
+}
+
+/**riamneave styling **/
+#skyfishing {
+    left: 82%;
+    top: 55%;
+    visibility: hidden;
+}
+
+#magical-research {
+    left: 20%;
+    visibility: hidden;
+}
+
+#magic-rocks {
+    left: 40%;
+    top: 18%;
+    visibility: hidden;
+}
+
+#draketaming {
+    top: 11%;
+    left: 64%;
+    visibility: hidden;
+}
+.cloud {
+    height: 25vh;
+    width: 45%;
+    position: absolute;
+    z-index: 1;
+    background-size: contain;
+   background-repeat: no-repeat;
+   
+}
+#cloud1 {
+   background-image: url("images/cloud1.png") ;
+   left: 5px;
+}
+
+#cloud2 {
+    background-image: url("images/cloud2.png");
+    top: 5%;
+}
+
+#cloud3 {
+    background-image: url("images/cloud3.png");
+    top: 60%;
+}
+/**skyfishing styling**/
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translatex(-700px);
+    }
+	100% {
+		transform: translatex(0px);
+	}
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translatex(700px);
+    }
+    
+	100% {
+		transform: translatex(0px);
+	}
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+	100% {
+		opacity: 1;
+	}
+}
+
+#airship {
+    background-image: url("images/airship.png");
+    background-size: contain;
+    height: 80vh;
+    width: 50vh;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    animation: float 6s ease-in-out infinite;
+}
+#skyfishing-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    vertical-align: center;
+}
+
+#go-fishing {
+    padding: 1em;
+    border-radius: 0.7em;
+    font-size: 2em;
+    position: absolute;
+    top: 70%;
+    z-index: 2;
+}
+
+#skyfish-img {
+    max-width: 40%;
+}
+#result-container {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(0, 122, 156);
+    border-radius: 2em;
+    text-align: center;
+    color: #fff;
+    gap: 2%;
+    
+}
+
+button.skyfish-button {
+    padding: 0.7em;
+    font-size: 0.5em;
+    border-radius: 1em;
+}
+#cloud1-skyfish {
+    background-image: url("images/cloud1.png") ;
+    top: 80%;
+ }
+ 
+ #cloud2-skyfish {
+     background-image: url("images/cloud2.png");
+     top: 75%;
+ }
+ 
+ #cloud3-skyfish {
+     background-image: url("images/cloud3.png");
+     top: 83%;
+ }
+ #cloud4-skyfish {
+    background-image: url("images/cloud1.png");
+    top: 77%;
+}
+#cloud5-skyfish {
+    background-image: url("images/cloud2.png");
+    top: 79%;
+}
+
+ /**samaed styling**/
+
+ #alden {
+    max-width: 100%;
+    max-height: 100%;
+    left: 20%;
+    position: relative;
+   animation: moveInRight 2s ease-in-out 1; 
+    z-index: 1;
+ }
+ #samaed-dialogue {
+    margin-left: -70%;
+ }
+
+ #samaed-intro {
+    position: relative;
+ }
+
+ #samaed-next {
+    position: relative;
+   
+ }
+
+ button.next-button {
+    background-color:rgb(0, 122, 156);
+    color: #fff;
+    border-radius: 0.5em;
+    font-size: 1em;
+    padding: 2%;
+    animation: appear 6s ease-in-out 1;
+ }
+
+ #samaed-container{
+    background: url("images/caer-samaed.png") no-repeat 0 0 fixed;
+    background-size: contain;
+    background-position-x: center;
+    
+ }
+
+ #cathedral{
+    left: 25%;
+    top: 28%;
+    visibility: hidden;
+ }
+
+ #execution {
+    left: 73%;
+    top: 40%;
+    visibility: hidden;
+ }
+
+ #tree-towers {
+    left: 12%;
+    visibility: hidden;
+ }
+
+ #utopia {
+    left: 80%;
+    top: 20%;
+    visibility: hidden;
+ }
+
+ /**duels styling**/
+
+#duels-container {
+    flex-direction: column;
+    gap: 4vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#duels-container span {
+    font-size: 7vh;
+    margin: auto;
+}
+#duel-title {
+    font-family: 'Caveat Brush';
+    font-size: 15vh;
+}
+#duel-explanation {
+    font-size: 4vh;
+    margin-top: -2vh;
+}
+#score {
+    display: flex;
+    gap: 5vw;
+    background-color:#fff;
+    padding: 1em;
+    align-content: center;
+    justify-content: center;
+    border-radius: 0.75em;
+}
+#opponent-score, #player-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    gap: 0;
+}
+p.count {
+    font-size: 10vh;
+    line-height: 0;
+    margin: 10%;
+    height: 100%;
+}
+
+ img.duel-button {
+    max-width: 8%;
+    border-radius: 0.5em;
+ }
+
+ #choose-move {
+    font-size: 6vh;
+    font-weight: bold;
+ }
+ #moves-left {
+    margin-top: -2%;
+    font-size: 3vh;
+ }
+
+ #duel-restart {
+    display: none;
+    cursor: pointer;
+    font-size: 3vh;
+    padding: 1.2em;
+    border-radius: 0.75em;
+ }
+ 
+ 
+ #result-duels {
+    visibility: hidden;
+    font-size: 3vh;
+    max-width: 70vw;
+    text-align: center;
+    background-color: rgb(22, 17, 59);
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 1px 1px rgb(6, 6, 34);
+ }
+
+ #return-to-samaed {
+    top: 5%;
+    left: 75%;
+ }
+
+ #duelling-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ /**memory game styling**/
+
+ #plantgame-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(0, 2, 32), rgb(7, 17, 76));
+ }
+
+ #memory-container {
+    gap: 0;
+    flex-wrap: wrap;
+    margin: auto;
+    min-width: 70px;
+    width: 58vw;
+    min-height: 10px;
+    height: 90vh; 
+    perspective: 1000px; /**for 3d effect **/
+    text-align: left;
+ }
+
+ #plant-dialogue-container {
+    position: absolute;
+    z-index: 3;
+ }
+ .memory-card {
+    width: calc(23%);
+    height: calc(31.333%);
+    position: relative;
+    margin: 1%;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+ }
+
+ .memory-card:active {
+    transform: scale(0.95);
+    transition: transform .3s;
+ }
+
+ .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+
+ .front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 1px 1px rgb(6, 6, 34);
+    backface-visibility: hidden;
+ }
+
+ .front-face {
+    transform: rotateY(180deg);
+  }
+
+  /**mountain styling**/
+
+  #mount-container {
+    background: url("images/mountain.png") no-repeat 0 0 fixed;
+    background-size: contain;
+    background-position-x: center;
+  }
+
+  #wall-homes {
+    left: 20%;
+    top: 15%;
+  }
+
+  #tree {
+    left: 66%;
+  }
+
+  #to-plant-game {
+    left: 80%
+  }
+
+  #plantgame-result {
+    display: none;
+    visibility: hidden;
+    flex-direction: column;
+    padding: 0.5em;
+    font-size: 3em;
+    background-color:rgb(0, 122, 156);
+    min-width: 70px;
+    width: 40vw;
+    min-height: 10px;
+    height: 40vh; 
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 5px 5px rgb(6, 6, 34);
+  }
+
+  #elise, #elise-plantgame {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    left: 50%;
+    animation: moveInRight 2s ease-in-out 1;
+    z-index: 1;
+  }
+
+  #mount-dialogue, #plant-dialogue {
+    position: relative;
+    left: -40%;
+  }
+
+ /**Credits styling**/
+
+  #credits-container {
+    flex-direction: column;
+    font-size: 5vh;
+    
+  }
+  h1 {
+    font-family: 'Caveat Brush';
+    font-size: 13vh;
+    font-weight: lighter;
+  }
+
+  h2 {
+    font-size: 7vh;
+  }
+
+  #credits-container p {
+    margin-inline: 2%;
+  }
+
+  #credits-body {
+    overflow-y: visible;
+    background-size: 200%;
+    background-attachment: fixed;
+  }
+

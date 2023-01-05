@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    </style>
+    <script src="js/caer-samaed.js"></script>
+    <title>Caer Samaed</title>
+</head>
+<body>
+    <div id="samaed-container" class="container">
+        <div class="character">
+            <img id="alden" src="images/alden.png">
+        </div>
+        <div class="dialogue-container" id="samaed-dialogue">
+            <div class="dialogue" id="samaed-intro">
+                Welcome to the heartland of Caer Samaed! 
+            </div>
+            <button class="next-button" id="samaed-next">Next</button>
+        </div>
+        
+
+        <div class="map-point" id="cathedral">
+            <div class="text">
+                The people of Caer Samaed worship Illatha, a goddess who is the embodiment of nature. As such, communities under the Empire’s jurisdiction are built in harmony with the natural world around them. Rather than clearing space for the village, edifices are intertwined within the preexisting ecosystem.
+            </div>
+        </div>
+        <div class="map-point" id="execution">
+            <div class="text">
+                Caer Samaed’s laws clearly stipulate that the use of any form of magic is strictly forbidden all throughout the land. Supernatural magical beings directly oppose their values rooted in respect and preservation of the natural world. The Empire employs Laimar tribes, creatures which feast on magic spells, to catch and drain mages of their magical abilities. When the mage has been purified, they are put to death at the central execution tree for all to see. 
+            </div>
+        </div>
+        <div class="map-point" id="tree-towers">
+            <div class="text"> 
+                Many citizens of Caer Samaed do not bother building new houses. Adequate living quarters are found within the ancient trees; as such, staircases spiralling upward around tree trunks are a common sight in the Empire. 
+            </div>
+        </div>
+        <div class="map-point" id="utopia">
+            <div class="text">
+                Caer Samaed is constantly looking to expand its army. The Empire hopes to one day take over the entire continent. As such, any new visitors are welcome to participate in some beginner-level duels. 
+            </div>
+            <button class="location-button" onclick="location.href='duels.html'">To the Training Grounds</button>
+        </div>
+        <button class="map-button" onclick="location.href = 'map.html'">Map</button>
+        
+    </div>
+    
+</body>
+</html>

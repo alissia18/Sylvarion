@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/duels.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+    </style>
+    
+    <title>Mock Duels</title>
+</head>
+<body>
+   <div class="container" id="duels-container">
+        <div id="duel-title">
+            Duelling Basics
+        </div>
+        <div id="duel-explanation">
+            Sword beats Shield, Shield beats Bow, Bow beats Sword
+        </div>
+        <div id="score">
+            <div id="player-score">
+                <span>Visitor</span>
+                <p class="count" id="player-count">0</p>
+            </div>
+            <div id="opponent-score">
+                <span>Opponent</span>
+                <p class="count" id="opponent-count">0</p>
+            </div>
+        </div>
+        <div id="choose-move">
+            Choose your action
+        </div>
+        <div id="moves-left">
+            Moves left: 10
+        </div>
+        <div id="duelling-options">
+            <!-- <button class="duel-button" id="sword">Sword</button>
+            <button class="duel-button" id="shield">Shield</button>
+            <button class="duel-button" id="bow">Bow</button> -->
+            <img class="duel-button" onmouseover="hover(this)" onmouseout="unhover(this)" id="sword" src="images/sword.png">
+            <img class="duel-button" onmouseover="hover(this)" onmouseout="unhover(this)" id="shield" src="images/shield.png">
+            <img class="duel-button" onmouseover="hover(this)" onmouseout="unhover(this)" id="bow" src="images/bow.png">
+        </div>
+
+        <div id="result-duels"></div>
+        <button id="duel-restart">Restart Game</div>
+        <button class="map-button" id="return-to-samaed" onclick="location.href = 'caer-samaed.html'">Return to Caer Samaed</button>
+
+   </div>
+
+
+</body>
+</html>

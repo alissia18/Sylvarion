@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/skyfishing.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    </style>
+    
+    <title>Skyfishing</title>
+</head>
+<body onkeydown = "move(event)" id="skyfishing-body">
+    <div id="skyfishing-container">
+        <div id="airship"></div>
+        <button id="go-fishing" onclick = "goFishing()">Go Fishing</button>
+        <div class="cloud" id="cloud1-skyfish"></div>
+            <div class="cloud" id="cloud2-skyfish"></div>
+            <div class="cloud" id="cloud3-skyfish"></div>
+            <div class="cloud" id="cloud4-skyfish"></div>
+            <div class="cloud" id="cloud5-skyfish"></div>
+    </div>
+    <div id="result-container">
+        <div id="result"></div>
+        <img src="images/skyfishing/nothing.png" id="skyfish-img">
+        <div>
+            <button class="skyfish-button" onclick="reset()" id="try-again">Try again?</button>
+        </div>
+        <div>
+            <button class="skyfish-button" onclick = "location.href = 'riam-neave.html'">Return To Riam'Neave</button>
+        </div>
+    </div>
+</body>
+</html>
