@@ -18,6 +18,15 @@ button {
    
 }
 
+button.next-button:disabled {
+    background-color:rgb(159, 165, 199);
+}
+
+button.next-button:disabled:hover {
+    box-shadow: none;
+    cursor: default;
+}
+
 button:hover {
     cursor: pointer;
     background-color: rgb(0, 63, 93);
@@ -212,14 +221,6 @@ button.location-button:hover {
     animation: appear 6s ease-in-out 1;
 }
 
-#riamneave-next{
-    opacity: 1;
-    background-color:rgb(0, 122, 156);
-    color: #fff;
-    border-radius: 0.5em;
-    font-size: larger;
-    animation: appear 6s ease-in-out 1;
-}
 button.map-button {
     padding: 1.5%;
     align-self: baseline;

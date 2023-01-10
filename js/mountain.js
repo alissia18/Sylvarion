@@ -51,10 +51,13 @@ window.onload = function(){
     
 
     function writeDialogue(text){
-         if(i < text.length){
+        next.disabled = true;
+        if(i < text.length){
             dialogue.textContent += text.charAt(i);
             i++;
             setTimeout(writeDialogue, speed, text);
+        } else {
+            next.disabled = false;
         }
         
     }
