@@ -1,2 +1,2 @@
 # Sylvarion
-An interactive fantasy world map featuring hand-drawn characters and environments. Optimized for viewing on PCs or laptops.
+This is an interactive fantasy world map website featuring hand-drawn characters and environments. Optimized for viewing on PCs or laptops.
