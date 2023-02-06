@@ -6,67 +6,23 @@ window.onload = function(){
  startX = 0,
  startY = 0,
  map = document.getElementById("map");
- 
- function setTransform() {
-   map.style.transform = "translate(" + pointX + "px, " + pointY + "px) scale(" + scale + ")";
-  }
-  
-  map.onmousedown = function (e) {
-     startX = e.clientX - pointX;
-     startY = e.clientY - pointY;
-     panning = true;
-   }
-  
-  map.onmouseup = function (e) {
-     panning = false;
-   }
-  
-  
-  map.addEventListener('mousemove', function(e) {
-     if (!panning) {
-       return;
-     }
-     pointX = (e.clientX - startX);
-     pointY = (e.clientY - startY);
-     setTransform();
-    });
-
-map.onwheel = function (e) {
- var xs = (e.clientX - pointX) / scale;
- var ys = (e.clientY - pointY) / scale;
- var change;
- change = -e.deltaY;
- 
-  if(change > 0){
-    scale *= 1.2
-  } else {
-    scale /= 1.2;
-  }
-
- pointX = e.clientX - xs * scale;
- pointY = e.clientY - ys * scale;
- setTransform();
- }
-
  // for the character and dialogue 
  var next = document.getElementById("map-continue");
  var i = 0;
  var counter = 0;
- var speed = 50;
+ var speed = 25;
  var img = document.getElementById("sapphira-map");
  let hasPlayed = sessionStorage.getItem("introPlayed");
  var dialogue = document.getElementById("map-intro");
  var container = document.querySelector(".dialogue-container");
 
 if(hasPlayed){
-  img.style.visibility = "hidden";
-  container.style.visibility = "hidden";
-  next.style.visibility = "hidden";
-  document.getElementById("riam-neave").style.visibility = "visible";
-  document.getElementById("mount-raenmora").style.visibility = "visible";
-  document.getElementById("caer-samaed").style.visibility = "visible";
+  hideElements();
 } else {
  
+  document.getElementById("map-skip").onclick = function(){
+    hideElements();
+  }
  next.onclick = function(){
   counter = ++counter;
   
@@ -99,18 +55,23 @@ if(hasPlayed){
     writeDialogue("…Well I’ll head off to my post at Riam’Neave, see you there! But remember to check out the other places too!");
     next.innerHTML = "DONE";
   } else if(counter == 8){
-     container.style.visibility = "hidden";
-      img.style.visibility = "hidden";
-      next.style.visibility = "hidden";
-      document.getElementById("riam-neave").style.visibility = "visible";
-      document.getElementById("mount-raenmora").style.visibility = "visible";
-      document.getElementById("caer-samaed").style.visibility = "visible";
-      if(!hasPlayed) {
-        sessionStorage.setItem("introPlayed", "true")
-    } 
+   hideElements();
   }
   
 }
+}
+
+function hideElements(){
+  container.style.visibility = "hidden";
+  img.style.visibility = "hidden";
+  next.style.visibility = "hidden";
+  document.getElementById("map-skip").style.visibility = "hidden";
+  document.getElementById("riam-neave").style.visibility = "visible";
+  document.getElementById("mount-raenmora").style.visibility = "visible";
+  document.getElementById("caer-samaed").style.visibility = "visible";
+  if(!hasPlayed) {
+    sessionStorage.setItem("introPlayed", "true")
+  } 
 }
 
 function writeDialogue(text){
@@ -124,7 +85,7 @@ function writeDialogue(text){
   }
   
 }
-};
+}
 
 
  

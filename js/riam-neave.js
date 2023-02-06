@@ -12,13 +12,13 @@ window.onload = function(){
     let hasPlayed = sessionStorage.getItem("introPlayed-riamneave");
 
     if(hasPlayed){
-        img.style.visibility = "hidden";
-        container.style.visibility = "hidden";
-        document.getElementById("skyfishing").style.visibility = "visible";
-        document.getElementById("draketaming").style.visibility = "visible";
-        document.getElementById("magical-research").style.visibility = "visible";
-        document.getElementById("magic-rocks").style.visibility = "visible";
+        hideElements();
     } else {
+        document.getElementById("riamneave-skip").onclick = function(){
+            hideElements();
+        }
+
+
         next.onclick = function(){
             counter = ++counter;
             
@@ -58,22 +58,25 @@ window.onload = function(){
                 next.innerHTML = "DONE";
             }
             else if(counter == 9){
-                container.style.visibility = "hidden";
-                img.style.visibility = "hidden";
-                next.style.visibility = "hidden";
-                document.getElementById("skyfishing").style.visibility = "visible";
-                document.getElementById("draketaming").style.visibility = "visible";
-                document.getElementById("magical-research").style.visibility = "visible";
-                document.getElementById("magic-rocks").style.visibility = "visible";
-                if(!hasPlayed) {
-                    sessionStorage.setItem("introPlayed-riamneave", "true")
-                } 
-
+                hideElements();
             }
     }
     
         
     }
+    function hideElements(){
+        container.style.visibility = "hidden";
+        img.style.visibility = "hidden";
+        next.style.visibility = "hidden";
+        document.getElementById("skyfishing").style.visibility = "visible";
+        document.getElementById("draketaming").style.visibility = "visible";
+        document.getElementById("magical-research").style.visibility = "visible";
+        document.getElementById("magic-rocks").style.visibility = "visible";
+        if(!hasPlayed) {
+            sessionStorage.setItem("introPlayed-riamneave", "true")
+        } 
+    }
+    
 
     function writeDialogue(text){
         next.disabled = true;

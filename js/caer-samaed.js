@@ -17,6 +17,9 @@ window.onload = function(){
         document.getElementById("execution").style.visibility = "visible";
         document.getElementById("tree-towers").style.visibility = "visible";
    } else {
+    document.getElementById("samaed-skip").onclick = function(){
+        hideElements();
+      }
         next.onclick = function(){
             counter = ++counter;
             
@@ -39,23 +42,26 @@ window.onload = function(){
                 next.innerHTML = "DONE";
             }
             else if(counter == 5){
-                container.style.visibility = "hidden";
-                img.style.visibility = "hidden";
-                next.style.visibility = "hidden";
-                document.getElementById("utopia").style.visibility = "visible";
-                document.getElementById("cathedral").style.visibility = "visible";
-                document.getElementById("execution").style.visibility = "visible";
-                document.getElementById("tree-towers").style.visibility = "visible";
-            
-            if(!hasPlayed) {
-                sessionStorage.setItem("introPlayed-samaed", "true")
-            } 
-                
+                hideElements();   
             }
             
         }
 
     }
+
+    function hideElements(){
+            container.style.visibility = "hidden";
+            img.style.visibility = "hidden";
+            next.style.visibility = "hidden";
+            document.getElementById("samaed-skip").style.visibility = "hidden";
+            document.getElementById("utopia").style.visibility = "visible";
+            document.getElementById("cathedral").style.visibility = "visible";
+            document.getElementById("execution").style.visibility = "visible";
+            document.getElementById("tree-towers").style.visibility = "visible";
+            if(!hasPlayed) {
+              sessionStorage.setItem("introPlayed-samaed", "true")
+            } 
+      }
 
     function writeDialogue(text){
         next.disabled = true;

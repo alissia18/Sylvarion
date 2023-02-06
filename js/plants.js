@@ -15,11 +15,11 @@ window.onload = function(){
     let hasPlayed = sessionStorage.getItem("introPlayed-plant");
    
     if(hasPlayed){
-        img.style.visibility = "hidden";
-        container.style.visibility = "hidden";
-        next.style.visibility = "hidden";
-        document.getElementById("plant-dialogue-container").style.zIndex = "-9";
+        hideElements();
     } else {
+        document.getElementById("plant-skip").onclick = function(){
+            hideElements();
+          }
 
         next.onclick = function(){
             counter = ++counter;
@@ -37,18 +37,23 @@ window.onload = function(){
                 writeDialogue("To match the correct bunches of flowers together, you must peek between the petals of each protective bulb. There are six types of flowers to be harvested–see if you can collect all the pairs!");
                 next.innerHTML = "DONE";
             } else if(counter == 4){
-                container.style.visibility = "hidden";
-                img.style.visibility = "hidden";
-                next.style.visibility = "hidden";
-                document.getElementById("plant-dialogue-container").style.zIndex = "-9";
-                if(!hasPlayed) {
-                    sessionStorage.setItem("introPlayed-plant", "true")
-                } 
+                hideElements();
             }
             
         }
 
     }
+
+     
+    function hideElements(){
+        container.style.visibility = "hidden";
+        img.style.visibility = "hidden";
+        next.style.visibility = "hidden";
+        document.getElementById("plant-dialogue-container").style.zIndex = "-9";
+        if(!hasPlayed) {
+            sessionStorage.setItem("introPlayed-plant", "true")
+        } 
+      }
     
     function writeDialogue(text){
         next.disabled = true;

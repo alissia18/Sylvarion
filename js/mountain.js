@@ -9,14 +9,11 @@ window.onload = function(){
     let hasPlayed = sessionStorage.getItem("introPlayed-mount");
    
     if(hasPlayed){
-        img.style.visibility = "hidden";
-        container.style.visibility = "hidden";
-        next.style.visibility = "hidden";
-        document.getElementById("to-plant-game").style.visibility = "visible";
-        document.getElementById("tree").style.visibility = "visible";
-        document.getElementById("wall-homes").style.visibility = "visible";
+        hideElements();
     } else {
-
+        document.getElementById("mountain-skip").onclick = function(){
+            hideElements();
+          }
         next.onclick = function(){
             counter = ++counter;
             
@@ -33,22 +30,24 @@ window.onload = function(){
                 writeDialogue("I’ll leave you to have a look around now. Follow me to our agricultural fields when you’re ready and I can teach you about the wildlife that grows here, if you’d like.");
                 next.innerHTML = "DONE";
             } else if(counter == 4){
-                container.style.visibility = "hidden";
-                img.style.visibility = "hidden";
-                next.style.visibility = "hidden";
-                document.getElementById("to-plant-game").style.visibility = "visible";
-                document.getElementById("tree").style.visibility = "visible";
-                document.getElementById("wall-homes").style.visibility = "visible";
-                if(!hasPlayed) {
-                    sessionStorage.setItem("introPlayed-mount", "true")
-                } 
+                hideElements();
             }
             
         }
 
     }
     
-    
+    function hideElements(){
+        container.style.visibility = "hidden";
+        img.style.visibility = "hidden";
+        next.style.visibility = "hidden";
+        document.getElementById("to-plant-game").style.visibility = "visible";
+        document.getElementById("tree").style.visibility = "visible";
+        document.getElementById("wall-homes").style.visibility = "visible";
+        if(!hasPlayed) {
+            sessionStorage.setItem("introPlayed-mount", "true")
+          } 
+      }
 
     function writeDialogue(text){
         next.disabled = true;
